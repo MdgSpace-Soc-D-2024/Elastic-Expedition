@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Abhisaar\\Physics\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2F00C848-03D2-452F-506A-EE212A5702EC}|Assembly-CSharp.csproj|c:\\users\\abhisaar\\physics\\assets\\script\\physics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F00C848-03D2-452F-506A-EE212A5702EC}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\physics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Physics.cs",
+              "DocumentMoniker": "C:\\Users\\Abhisaar\\Physics\\Assets\\Script\\Physics.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Physics.cs",
+              "ToolTip": "C:\\Users\\Abhisaar\\Physics\\Assets\\Script\\Physics.cs",
+              "RelativeToolTip": "Assets\\Script\\Physics.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAiwFsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-24T19:42:16.899Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
