@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Abhisaar\\Physics\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F00C848-03D2-452F-506A-EE212A5702EC}|Assembly-CSharp.csproj|c:\\users\\abhisaar\\physics\\assets\\script\\physics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F00C848-03D2-452F-506A-EE212A5702EC}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\physics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F00C848-03D2-452F-506A-EE212A5702EC}|Assembly-CSharp.csproj|c:\\users\\abhisaar\\physics\\assets\\scripts\\loading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F00C848-03D2-452F-506A-EE212A5702EC}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\loading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\abhisaar\\physics\\assets\\script\\physics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\script\\physics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Physics.cs",
               "DocumentMoniker": "C:\\Users\\Abhisaar\\Physics\\Assets\\Script\\Physics.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Physics.cs",
               "ToolTip": "C:\\Users\\Abhisaar\\Physics\\Assets\\Script\\Physics.cs",
               "RelativeToolTip": "Assets\\Script\\Physics.cs",
-              "ViewState": "AgIAAAMBAAAAAAAAAAAIwBABAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T19:42:16.899Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LOADING.cs",
+              "DocumentMoniker": "C:\\Users\\Abhisaar\\Physics\\Assets\\Scripts\\LOADING.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LOADING.cs",
+              "ToolTip": "C:\\Users\\Abhisaar\\Physics\\Assets\\Scripts\\LOADING.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LOADING.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:32:51.241Z",
               "EditorCaption": ""
             }
           ]
