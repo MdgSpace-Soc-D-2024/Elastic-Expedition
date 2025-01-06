@@ -319,6 +319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3e9f52fe9b2e1448eaf18cd257c83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainCamera2: {fileID: 0}
+  Frame: {fileID: 0}
 --- !u!4 &259527062
 Transform:
   m_ObjectHideFlags: 0
@@ -2790,6 +2792,8 @@ GameObject:
   - component: {fileID: 1810562815}
   - component: {fileID: 1810562814}
   - component: {fileID: 1810562813}
+  - component: {fileID: 1810562812}
+  - component: {fileID: 1810562811}
   m_Layer: 0
   m_Name: Wheel2
   m_TagString: Untagged
@@ -2797,6 +2801,74 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1810562811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810562810}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d80b9c92e0c35547a27bf1c4d0cec88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1810562812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810562810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b71a76f250fe545a4615fb4bc686fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wheel: {fileID: 1810562815}
+  Wheel2: {fileID: 0}
+  Square: {fileID: 0}
+  MainCam: {fileID: 104219700}
+  mu: 0.6
+  e: 0.42
+  radius: 1.31
+  mass: 1
+  theta1: 0
+  alpha1: 0
+  torque1: 0
+  theta2: 0
+  alpha2: 0
+  torque2: 0
+  fmax1: 0
+  fmax2: 0
+  MOI: 0
+  pi: 3.1415927
+  rod_length: 7.2
+  omega_cm: 0
+  theta_cm: 0
+  alpha_cm: 0
+  omega1: 0
+  omega2: 0
+  pos1: {x: 0, y: 0}
+  pos2: {x: 0, y: 0}
+  velocity_cm: {x: 0, y: 0}
+  velocity1: {x: 0, y: 0}
+  velocity2: {x: 0, y: 0}
+  acc: {x: 0, y: 0}
+  gravity: {x: 0, y: -9.8}
+  friction1: {x: 0, y: 0}
+  friction2: {x: 0, y: 0}
+  Normal1: {x: 0, y: 0}
+  Normal2: {x: 0, y: 0}
+  Applied_Force: {x: 0, y: 0}
+  net_force: {x: 0, y: 0}
+  tangent1: {x: 0, y: 0}
+  tangent2: {x: 0, y: 0}
+  rod_normal: {x: 0, y: 0}
+  rod_along: {x: 0, y: 0}
+  MOI_cm: 0
+  check: 0
+  prev_check: 0
 --- !u!58 &1810562813
 CircleCollider2D:
   m_ObjectHideFlags: 0
