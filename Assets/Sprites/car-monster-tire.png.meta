@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6da0761d3737e034a95870e3e1285b0f
+guid: 93fe81f3f5ac49b49b3c21f9af523149
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6337757556742298555
-    second: Forward_0
+      213: -4655929886217013300
+    second: car-monster-tire_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Forward_0
+      name: car-monster-tire_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 16
-        width: 116
-        height: 117
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbb1c224bec34f750800000000000000
-      internalID: 6337757556742298555
+      spriteID: cc7f8e8cf60d26fb0800000000000000
+      internalID: -4655929886217013300
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Forward_0: 6337757556742298555
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
