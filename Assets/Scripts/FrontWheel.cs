@@ -72,7 +72,7 @@ public class Front_wheel : MonoBehaviour
         MaintainOscillation(dt);
         netForce =appliedForce+mass * gravity + normal + friction-airdrag*velocity;
         ApplyForces(netForce, dt);
-        MainCam.localPosition =(rearWheel.localPosition+Wheel.localPosition)/2f + new Vector3(0f, camerY, -7f);
+        MainCam.localPosition =(rearWheel.localPosition+Wheel.localPosition)/2f + new Vector3(0f, camerY, -5f);
         sprite.localPosition = (rearWheel.localPosition + Wheel.localPosition) / 2f+new Vector3(0f,3f,0f);
         Vector3 tangent = Wheel.localPosition - rearWheel.localPosition;
         float angle = Mathf.Atan2(tangent.y, tangent.x) * Mathf.Rad2Deg;

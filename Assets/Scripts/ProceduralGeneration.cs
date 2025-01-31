@@ -16,7 +16,8 @@ public class TerrainCreator : MonoBehaviour
     public Sprite edgeSprite; // The sprite to use for the edge
     public Color edgeColor = Color.white;
     public GameObject Fuel;
-    public GameObject Grass1,Grass2,Tree1,Stone1,Stone2,Flower,Emptyy,Cloud1,Cloud2;
+    public GameObject Grass1,Grass2,Tree1,Stone1,Stone2,Flower,Emptyy,Cloud1,Cloud2,Cloud3,Cloud4,CloudParent,CloudParent2;
+    internal static bool isTerrainRendered;
 
     private void Start()
     {   
@@ -43,9 +44,9 @@ public class TerrainCreator : MonoBehaviour
         // Generate initial control points using Perlin Noise
         for (int i = 0; i < numOfPoints; i++)
         {   
-            if(i>50){
-                heightMultiplier+=1f;
-                smoothness +=  0.05f;
+            if(i>25){
+                heightMultiplier+=2f;
+                smoothness +=  0.02f;
             }
             float xPos = i * distanceBetweenPoints;
             float yPos = Mathf.PerlinNoise(i / smoothness,seed) * heightMultiplier;
@@ -59,16 +60,16 @@ public class TerrainCreator : MonoBehaviour
             prevY = yPos;
         }
         // Set tangent mode for smooth curves
-        for (int i = 2; i < numOfPoints + 2; i++)
-        {
-            shape.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
-        }
+        // for (int i = 2; i < numOfPoints + 2; i++)
+        // {
+        //     shape.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
+        // }
         // Smooth the terrain using Catmull-Rom interpolation
         SmoothSpline();
 
         // Update EdgeCollider2D to follow the smooth terrain
         UpdateEdgeCollider();
-        SpawnGrass();
+        SpawnProps();
         SpawnClouds();
     }
     private void SmoothSpline()
@@ -136,9 +137,11 @@ public class TerrainCreator : MonoBehaviour
         // Assign sampled points to the EdgeCollider2D
         edgeCollider.points = colliderPoints.ToArray();
     }
-    private void SpawnGrass()
+    private void SpawnProps()
 {   
-    for (int i = 50; i < shape.spline.GetPointCount() - 1; i++)
+    int pointCount = shape.spline.GetPointCount(); // Store count for efficiency
+
+    for (int i = 50; i < pointCount - 1; i++)
     {
         Vector3 point = shape.spline.GetPosition(i);
         Vector3 nextPoint = shape.spline.GetPosition(i + 1);
@@ -147,58 +150,73 @@ public class TerrainCreator : MonoBehaviour
         Vector3 tangent = nextPoint - point;
         float angle = Mathf.Atan2(tangent.y, tangent.x) * Mathf.Rad2Deg;
 
-        // Randomize grass placement
-        
-        int randomNumber = new System.Random().Next(1, 1001);
-        if (randomNumber <=100)
+        // Randomize prop placement
+        int randomNumber = UnityEngine.Random.Range(1, 2001);
+
+        if (randomNumber <= 100)
         {   
-            GameObject grassPrefab ;
-            if(randomNumber > 50)
-                grassPrefab= Grass1;
-            else if(randomNumber > 3)
-                grassPrefab= Grass2;
-            else
-                grassPrefab= Tree1;
-            // Instantiate and rotate grass to align with slope
-            Instantiate(grassPrefab, point+new Vector3(0,0,0), Quaternion.Euler(0, 0, angle));
+            GameObject grassPrefab = (randomNumber > 50) ? Grass1 : (randomNumber > 3) ? Grass2 : Tree1;
+            Instantiate(grassPrefab, point, Quaternion.Euler(0, 0, angle));
         }
-        else if(randomNumber <=130)
+        else if (randomNumber <= 130)
         {   
-            GameObject StonePrefab =null;
-            if(randomNumber >100){
-            if(randomNumber <108)
-                StonePrefab= Stone1;
-            else if(randomNumber < 120)
-                StonePrefab= Stone2;
-            else if(randomNumber < 123)
-                StonePrefab= Flower;
-            else 
-                StonePrefab= Emptyy;
-            }
-            // Instantiate and rotate grass to align with slope
-            Instantiate(StonePrefab, point+new Vector3(0,-0.3f,0), Quaternion.Euler(0, 0, angle));
+            GameObject stonePrefab = null;
+
+            if (randomNumber < 108)
+                stonePrefab = Stone1;
+            else if (randomNumber < 120)
+                stonePrefab = Stone2;
+            else if (randomNumber < 123)
+                stonePrefab = Flower;
+
+            if (stonePrefab != null) // Prevent null instantiation
+                Instantiate(stonePrefab, point + new Vector3(0, -0.3f, 0), Quaternion.Euler(0, 0, angle));
         }
     }
 }
-    private void SpawnClouds()
-    {
-        for (int i = 50; i < shape.spline.GetPointCount() - 1; i++)
-        {
-            Vector3 point = shape.spline.GetPosition(i);
-            Vector3 nextPoint = shape.spline.GetPosition(i + 1);
-            GameObject CloudPrefab = null; 
-            int randomNumber = new System.Random().Next(1, 1001);
-            if(randomNumber <=10)
-            {
-                CloudPrefab = Cloud1;
-                GameObject c=Instantiate(CloudPrefab,point+new Vector3(0,new System.Random().Next(35, 55),0), Quaternion.identity);
 
-            }
-            else if(randomNumber <=20)
-            {
-                CloudPrefab = Cloud2;
-                Instantiate(CloudPrefab,point+new Vector3(0,new System.Random().Next(40, 70),0), Quaternion.identity);
-            }
+    private void SpawnClouds()
+{
+    int pointCount = shape.spline.GetPointCount(); // Store count for efficiency // Create parent for organization
+
+    for (int i = 0; i < pointCount; i++)
+    {
+        Vector3 point = shape.spline.GetPosition(i);
+        int randomNumber = UnityEngine.Random.Range(1, 600); // Use Unity's Random
+
+        GameObject cloudPrefab = null;
+        float heightOffset = 0f;
+
+        if (randomNumber <= 10)
+        {
+            cloudPrefab = Cloud1;
+            heightOffset = UnityEngine.Random.Range(20f, 45f);
+        }
+        else if (randomNumber <= 20)
+        {
+            cloudPrefab = Cloud2;
+            heightOffset = UnityEngine.Random.Range(30f, 55f);
+        }
+        else if (randomNumber <= 30)
+        {
+            cloudPrefab = Cloud3;
+            heightOffset= UnityEngine.Random.Range(20f, 35f);
+        }
+        else if (randomNumber <= 40)
+        {
+            cloudPrefab = Cloud4;
+            heightOffset = UnityEngine.Random.Range(35f, 50f);
+        }
+
+        if (cloudPrefab != null)
+        {
+            GameObject cloudInstance = Instantiate(cloudPrefab, point + new Vector3(0, heightOffset, 0), Quaternion.identity);
+            if(randomNumber<=20)
+                cloudInstance.transform.SetParent(CloudParent.transform); // Assign to parent GameObject
+            else
+                cloudInstance.transform.SetParent(CloudParent2.transform);
         }
     }
+}
+
 }

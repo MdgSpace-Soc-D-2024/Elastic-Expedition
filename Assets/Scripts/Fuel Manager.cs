@@ -7,6 +7,7 @@ public class FuelManager : MonoBehaviour
     private float currentFuel;   // Current fuel level
     public float fuelConsumptionRate = 1f; // Fuel consumed per second
     public Slider loadingBar; // Reference to the Slider UI element   
+    public GameObject GameOverPanel;
     
     private void Start()
     {
@@ -53,9 +54,8 @@ public class FuelManager : MonoBehaviour
 
     private void GameOver()
     {
-        // Logic for when the player runs out of fuel
-        Debug.Log("Out of fuel! Game Over!");
-        // Freeze the game or reload the level, etc.
+        GameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     private void DetectFuelPickups()
