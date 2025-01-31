@@ -1,0 +1,1517 @@
+fileFormatVersion: 2
+guid: 67ee42ef205f0e345b32ce36bfea5df7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7723890549408831732
+    second: Iconnn_0
+  - first:
+      213: 3241692418604942441
+    second: Iconnn_1
+  - first:
+      213: 4376135425423233727
+    second: Iconnn_2
+  - first:
+      213: 3435038445136975557
+    second: Iconnn_3
+  - first:
+      213: -2643098435565978104
+    second: Iconnn_4
+  - first:
+      213: 4372752280062057822
+    second: Iconnn_5
+  - first:
+      213: -2658304190760671317
+    second: Iconnn_6
+  - first:
+      213: -8679512697772807972
+    second: Iconnn_7
+  - first:
+      213: 1019896296435615205
+    second: Iconnn_8
+  - first:
+      213: 8624997462270865229
+    second: Iconnn_9
+  - first:
+      213: -6898597847414719183
+    second: Iconnn_10
+  - first:
+      213: 5294242500631491556
+    second: Iconnn_11
+  - first:
+      213: -7157167041212811302
+    second: Iconnn_12
+  - first:
+      213: 7385933622903261342
+    second: Iconnn_13
+  - first:
+      213: 6090369423924735765
+    second: Iconnn_14
+  - first:
+      213: 3662076756654399017
+    second: Iconnn_15
+  - first:
+      213: 7605331859481523106
+    second: Iconnn_16
+  - first:
+      213: 2434375343382392855
+    second: Iconnn_17
+  - first:
+      213: -6258866573069567626
+    second: Iconnn_18
+  - first:
+      213: -8143752439037272982
+    second: Iconnn_19
+  - first:
+      213: 4232574082865324985
+    second: Iconnn_20
+  - first:
+      213: -3913131035993372761
+    second: Iconnn_21
+  - first:
+      213: 2434912171973660687
+    second: Iconnn_22
+  - first:
+      213: -569304111443438692
+    second: Iconnn_23
+  - first:
+      213: -1309923024349358058
+    second: Iconnn_24
+  - first:
+      213: -265137303880644792
+    second: Iconnn_25
+  - first:
+      213: 236145627402538129
+    second: Iconnn_26
+  - first:
+      213: -6895534758850454726
+    second: Iconnn_27
+  - first:
+      213: 1626113312963279666
+    second: Iconnn_28
+  - first:
+      213: 736683739563299297
+    second: Iconnn_29
+  - first:
+      213: 1764404640634168236
+    second: Iconnn_30
+  - first:
+      213: -6260331178506720138
+    second: Iconnn_31
+  - first:
+      213: -1976145170886846478
+    second: Iconnn_32
+  - first:
+      213: -2460375587584863689
+    second: Iconnn_33
+  - first:
+      213: -2601145542391252203
+    second: Iconnn_34
+  - first:
+      213: 1313992228319239426
+    second: Iconnn_35
+  - first:
+      213: 7553222172418422905
+    second: Iconnn_36
+  - first:
+      213: 6258576670470149858
+    second: Iconnn_37
+  - first:
+      213: 4291630553007238861
+    second: Iconnn_38
+  - first:
+      213: -6808280541769749561
+    second: Iconnn_39
+  - first:
+      213: -3311628268815795817
+    second: Iconnn_40
+  - first:
+      213: -5344786826757770827
+    second: Iconnn_41
+  - first:
+      213: -4539276507555496240
+    second: Iconnn_42
+  - first:
+      213: 1626348520883802976
+    second: Iconnn_43
+  - first:
+      213: 8735219011935557169
+    second: Iconnn_44
+  - first:
+      213: 6565800741584699684
+    second: Iconnn_45
+  - first:
+      213: -5436956450323089011
+    second: Iconnn_46
+  - first:
+      213: -3155567225914984474
+    second: Iconnn_47
+  - first:
+      213: 7169861886863611750
+    second: Iconnn_48
+  - first:
+      213: -2142139885517172872
+    second: Iconnn_49
+  - first:
+      213: 504142291258064304
+    second: Iconnn_50
+  - first:
+      213: 3302183243008176349
+    second: Iconnn_51
+  - first:
+      213: -2974395915496590539
+    second: Iconnn_52
+  - first:
+      213: -2079145305722320593
+    second: Iconnn_53
+  - first:
+      213: -4706471157679196691
+    second: Iconnn_54
+  - first:
+      213: 7595221632487658393
+    second: Iconnn_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Iconnn_0
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 158
+        width: 911
+        height: 866
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f892812885c03b60800000000000000
+      internalID: 7723890549408831732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_1
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 928
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964460a541eccfc20800000000000000
+      internalID: 3241692418604942441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_2
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 892
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2da51dbf72bbc30800000000000000
+      internalID: 4376135425423233727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 896
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c613382445bbaf20800000000000000
+      internalID: 3435038445136975557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_4
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 896
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ef2b10af3d15bd0800000000000000
+      internalID: -2643098435565978104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_5
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 890
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5dd0e7e7032fac30800000000000000
+      internalID: 4372752280062057822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_6
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 899
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba727cc3c6ecb1bd0800000000000000
+      internalID: -2658304190760671317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_7
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 893
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd862c9ff2d2c8780800000000000000
+      internalID: -8679512697772807972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_8
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 899
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e508c82746672e00800000000000000
+      internalID: 1019896296435615205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_9
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 896
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4fec47ae7522b770800000000000000
+      internalID: 8624997462270865229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_10
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 894
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d3290eec14340a0800000000000000
+      internalID: -6898597847414719183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_11
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 899
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e37ae4118de87940800000000000000
+      internalID: 5294242500631491556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 899
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7706e0f72acac90800000000000000
+      internalID: -7157167041212811302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_13
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 896
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9843c76f7b108660800000000000000
+      internalID: 7385933622903261342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_14
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 885
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f2fef09b6558450800000000000000
+      internalID: 6090369423924735765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_15
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 889
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92e999c586f42d230800000000000000
+      internalID: 3662076756654399017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_16
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 891
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a37b5b08019b8960800000000000000
+      internalID: 7605331859481523106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_17
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 856
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 710f6481a73a8c120800000000000000
+      internalID: 2434375343382392855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_18
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 858
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6793f9f330a0429a0800000000000000
+      internalID: -6258866573069567626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_19
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 857
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6c567cdd449bfe80800000000000000
+      internalID: -8143752439037272982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_20
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 856
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b366b604bf1dba30800000000000000
+      internalID: 4232574082865324985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_21
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 855
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a70f003e04c1b9c0800000000000000
+      internalID: -3913131035993372761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_22
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 843
+        width: 55
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00d3cd38bb8ac120800000000000000
+      internalID: 2434912171973660687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_23
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 845
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c939e3c4dec6918f0800000000000000
+      internalID: -569304111443438692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 633
+        width: 26
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6181d8a13f732dde0800000000000000
+      internalID: -1309923024349358058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_25
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 810
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8474d71e60b025cf0800000000000000
+      internalID: -265137303880644792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_26
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 635
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19c079c6235f64300800000000000000
+      internalID: 236145627402538129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_27
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 602
+        width: 11
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b1c52cba32e40a0800000000000000
+      internalID: -6895534758850454726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_28
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 579
+        width: 6
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23bb5bf417d119610800000000000000
+      internalID: 1626113312963279666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_29
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 565
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e11a7045f9393a00800000000000000
+      internalID: 736683739563299297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_30
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 570
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3ec052cac6c7810800000000000000
+      internalID: 1764404640634168236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_31
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 564
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67cedc836f5de19a0800000000000000
+      internalID: -6260331178506720138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_32
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 529
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f79fa8ef625394e0800000000000000
+      internalID: -1976145170886846478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_33
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 323
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73216ff407dfaddd0800000000000000
+      internalID: -2460375587584863689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_34
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 278
+        width: 51
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51bbda029efd6ebd0800000000000000
+      internalID: -2601145542391252203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_35
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 267
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d979648fc3c3210800000000000000
+      internalID: 1313992228319239426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_36
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 267
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 978ba901c8f62d860800000000000000
+      internalID: 7553222172418422905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_37
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 255
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e69bea825eead650800000000000000
+      internalID: 6258576670470149858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_38
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 273
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcea53bff3fee8b30800000000000000
+      internalID: 4291630553007238861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_39
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 265
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb2c984be02481a0800000000000000
+      internalID: -6808280541769749561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_40
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 252
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799b711a2abba02d0800000000000000
+      internalID: -3311628268815795817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_41
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 267
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b17aeee2b083d5b0800000000000000
+      internalID: -5344786826757770827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_42
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 266
+        width: 47
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0def0e501104101c0800000000000000
+      internalID: -4539276507555496240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_43
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 271
+        width: 52
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063d24cec53f19610800000000000000
+      internalID: 1626348520883802976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_44
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 186
+        width: 49
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13658a1096bb93970800000000000000
+      internalID: 8735219011935557169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_45
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 186
+        width: 60
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4210724ccf86e1b50800000000000000
+      internalID: 6565800741584699684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_46
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 187
+        width: 53
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8939372aec0c84b0800000000000000
+      internalID: -5436956450323089011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_47
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 186
+        width: 50
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7f872b35c2534d0800000000000000
+      internalID: -3155567225914984474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_48
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 186
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6671e170667708360800000000000000
+      internalID: 7169861886863611750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_49
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 185
+        width: 52
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87f8d88af179542e0800000000000000
+      internalID: -2142139885517172872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_50
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 186
+        width: 19
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd30ba2eb21ff600800000000000000
+      internalID: 504142291258064304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_51
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 186
+        width: 74
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0ffbee926b3dd20800000000000000
+      internalID: 3302183243008176349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_52
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 185
+        width: 65
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533f3738ca2d8b6d0800000000000000
+      internalID: -2974395915496590539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_53
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 0
+        width: 166
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2900083c546523e0800000000000000
+      internalID: -2079145305722320593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_54
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 0
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de5f8e40b614faeb0800000000000000
+      internalID: -4706471157679196691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iconnn_55
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 3
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9931ac265d5a76960800000000000000
+      internalID: 7595221632487658393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

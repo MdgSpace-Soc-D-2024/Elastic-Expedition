@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.U2D;
-
+using System;
+using Unity.VisualScripting;
 public class TerrainCreator : MonoBehaviour
 {
     public SpriteShapeController shape; // Reference to SpriteShapeController
@@ -12,29 +13,14 @@ public class TerrainCreator : MonoBehaviour
     public int colliderDetail = 10;    // Detail level for EdgeCollider2D sampling
     public float seed = 0f;
     private EdgeCollider2D edgeCollider; // EdgeCollider2D reference
-    public SpriteShapeController spriteShapeController;
     public Sprite edgeSprite; // The sprite to use for the edge
     public Color edgeColor = Color.white;
     public GameObject Fuel;
+    public GameObject Grass1,Grass2,Tree1,Stone1,Stone2,Flower,Emptyy,Cloud1,Cloud2;
+
     private void Start()
     {   
-        if (spriteShapeController != null && edgeSprite != null)
-        {
-            var spriteShape = spriteShapeController.spriteShape;
-            if (spriteShape != null)
-            {
-                // Assign the edge sprite
-                spriteShape.fillTexture = edgeSprite.texture;
-            }
-
-            // Optionally set color
-            var renderer = spriteShapeController.GetComponent<SpriteRenderer>();
-            if (renderer != null)
-            {
-                renderer.color = edgeColor;
-            }
-        }
-        // Initialize EdgeCollider2D
+        
         edgeCollider = GetComponent<EdgeCollider2D>();
         if (edgeCollider == null)
         {
@@ -53,36 +39,41 @@ public class TerrainCreator : MonoBehaviour
         //Make it strech lower
         shape.spline.SetPosition(1, shape.spline.GetPosition(1) + Vector3.down * 50);
         shape.spline.SetPosition(3, shape.spline.GetPosition(3) + Vector3.down * 50);
-
+        float prevX=0,prevY=0;
         // Generate initial control points using Perlin Noise
         for (int i = 0; i < numOfPoints; i++)
         {   
+            if(i>50){
+                heightMultiplier+=1f;
+                smoothness +=  0.05f;
+            }
             float xPos = i * distanceBetweenPoints;
             float yPos = Mathf.PerlinNoise(i / smoothness,seed) * heightMultiplier;
-             if(i%(numOfPoints/20) == 0)
+            Vector2 position = new Vector2(xPos, yPos);
+            if(i%(numOfPoints/20) == 0)
             {
-                Instantiate(Fuel,new Vector3(xPos, yPos+20, 0) , Quaternion.identity);
+                Instantiate(Fuel,new Vector3(xPos, yPos+10, 0) , Quaternion.identity);
             }
             shape.spline.InsertPointAt(i + 2, new Vector3(xPos, yPos, 0));
+            prevX = xPos;
+            prevY = yPos;
         }
-
         // Set tangent mode for smooth curves
         for (int i = 2; i < numOfPoints + 2; i++)
         {
             shape.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
         }
-
         // Smooth the terrain using Catmull-Rom interpolation
         SmoothSpline();
 
         // Update EdgeCollider2D to follow the smooth terrain
         UpdateEdgeCollider();
+        SpawnGrass();
+        SpawnClouds();
     }
-
     private void SmoothSpline()
     {
         var smoothedPoints = new System.Collections.Generic.List<Vector3>();
-
         // Iterate through each segment of the spline
         for (int i = 1; i < shape.spline.GetPointCount() - 2; i++)
         {
@@ -99,10 +90,8 @@ public class TerrainCreator : MonoBehaviour
                 smoothedPoints.Add(GetCatmullRomPosition(t, p0, p1, p2, p3));
             }
         }
-
         // Add the last control point
         smoothedPoints.Add(shape.spline.GetPosition(shape.spline.GetPointCount() - 2));
-
         // Clear the existing spline and recreate it using smoothed points
         shape.spline.Clear();
         for (int i = 0; i < smoothedPoints.Count; i++)
@@ -111,7 +100,6 @@ public class TerrainCreator : MonoBehaviour
             shape.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
         }
     }
-
     private Vector3 GetCatmullRomPosition(float t, Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)
     {
         float t2 = t * t;
@@ -148,5 +136,69 @@ public class TerrainCreator : MonoBehaviour
         // Assign sampled points to the EdgeCollider2D
         edgeCollider.points = colliderPoints.ToArray();
     }
-    
+    private void SpawnGrass()
+{   
+    for (int i = 50; i < shape.spline.GetPointCount() - 1; i++)
+    {
+        Vector3 point = shape.spline.GetPosition(i);
+        Vector3 nextPoint = shape.spline.GetPosition(i + 1);
+
+        // Calculate the slope (tangent vector)
+        Vector3 tangent = nextPoint - point;
+        float angle = Mathf.Atan2(tangent.y, tangent.x) * Mathf.Rad2Deg;
+
+        // Randomize grass placement
+        
+        int randomNumber = new System.Random().Next(1, 1001);
+        if (randomNumber <=100)
+        {   
+            GameObject grassPrefab ;
+            if(randomNumber > 50)
+                grassPrefab= Grass1;
+            else if(randomNumber > 3)
+                grassPrefab= Grass2;
+            else
+                grassPrefab= Tree1;
+            // Instantiate and rotate grass to align with slope
+            Instantiate(grassPrefab, point+new Vector3(0,0,0), Quaternion.Euler(0, 0, angle));
+        }
+        else if(randomNumber <=130)
+        {   
+            GameObject StonePrefab =null;
+            if(randomNumber >100){
+            if(randomNumber <108)
+                StonePrefab= Stone1;
+            else if(randomNumber < 120)
+                StonePrefab= Stone2;
+            else if(randomNumber < 123)
+                StonePrefab= Flower;
+            else 
+                StonePrefab= Emptyy;
+            }
+            // Instantiate and rotate grass to align with slope
+            Instantiate(StonePrefab, point+new Vector3(0,-0.3f,0), Quaternion.Euler(0, 0, angle));
+        }
+    }
+}
+    private void SpawnClouds()
+    {
+        for (int i = 50; i < shape.spline.GetPointCount() - 1; i++)
+        {
+            Vector3 point = shape.spline.GetPosition(i);
+            Vector3 nextPoint = shape.spline.GetPosition(i + 1);
+            GameObject CloudPrefab = null; 
+            int randomNumber = new System.Random().Next(1, 1001);
+            if(randomNumber <=10)
+            {
+                CloudPrefab = Cloud1;
+                GameObject c=Instantiate(CloudPrefab,point+new Vector3(0,new System.Random().Next(35, 55),0), Quaternion.identity);
+
+            }
+            else if(randomNumber <=20)
+            {
+                CloudPrefab = Cloud2;
+                Instantiate(CloudPrefab,point+new Vector3(0,new System.Random().Next(40, 70),0), Quaternion.identity);
+            }
+        }
+    }
 }

@@ -5,7 +5,7 @@ public class FuelManager : MonoBehaviour
 {
     public float maxFuel = 100f; // Maximum fuel the bike can have
     private float currentFuel;   // Current fuel level
-    public float fuelConsumptionRate = 5f; // Fuel consumed per second
+    public float fuelConsumptionRate = 1f; // Fuel consumed per second
     public Slider loadingBar; // Reference to the Slider UI element   
     
     private void Start()
@@ -29,13 +29,18 @@ public class FuelManager : MonoBehaviour
 
     private void ConsumeFuel()
     {
-        // Reduce fuel over time
+        // Reduce fuel over time4
+        if(Input.GetAxis("Horizontal")==0f&&Input.GetAxis("Vertical")!=0f)
+            fuelConsumptionRate=6f;
+        else if(Input.GetAxis("Horizontal")!=0f||Input.GetAxis("Vertical")!=0f)
+            fuelConsumptionRate=4f;
+        else
+            fuelConsumptionRate=1f;
         currentFuel -= fuelConsumptionRate * Time.deltaTime;
-
         // Clamp fuel to a minimum of 0
         if (currentFuel < 0f)
         {
-            currentFuel = 0f;
+            currentFuel = -5f;
             GameOver(); // Call GameOver when out of fuel
         }
     }
@@ -56,7 +61,7 @@ public class FuelManager : MonoBehaviour
     private void DetectFuelPickups()
     {
         // Perform a CircleCastAll to detect nearby pickups
-        RaycastHit2D[]  hits = Physics2D.CircleCastAll(transform.position, 5f, transform.forward, 0.01f,LayerMask.GetMask("Fuel"));
+        RaycastHit2D[]  hits = Physics2D.CircleCastAll(transform.position, 10f, transform.forward, 0.01f,LayerMask.GetMask("Fuel"));
 
         // Loop through all detected objects
         foreach (var hit in hits)
@@ -72,6 +77,6 @@ public class FuelManager : MonoBehaviour
     private void Refuel()
     {
         // Add fuel, clamped to maxFuel
-        currentFuel = maxFuel;
+        currentFuel = 100f;
     }
 }
