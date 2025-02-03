@@ -2213,7 +2213,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 011c4bca5c577654fac4c46198e139a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
+  Spring: {fileID: 0}
+  Fuel: {fileID: 0}
+  Engine: {fileID: 1503344507}
+  Rotation: {fileID: 0}
+  count1: 0
+  count2: 0
+  count3: 0
+  count4: 0
+  upgradecoins_rot: 50
+  upgradecoins_engine: 50
+  upgradecoins_spring: 50
+  upgradecoins_fuel: 50
 --- !u!4 &1425004389
 Transform:
   m_ObjectHideFlags: 0

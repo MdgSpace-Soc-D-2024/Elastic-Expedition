@@ -2,27 +2,30 @@ using UnityEngine;
 using UnityEngine.U2D;
 using System;
 using Unity.VisualScripting;
-public class Level_2 : MonoBehaviour
+public class CustomGeneratedLevel : MonoBehaviour
 {
     public SpriteShapeController shape; // Reference to SpriteShapeController
-    public int scale = 4000;            // Total width of the terrain
+    public int scale = 5000;            // Total width of the terrain
     public int numOfPoints = 100;       // Number of control points for the spline
-    public float heightMultiplier = 100f; // Max height of terrain
-    public float smoothness = 10f;      // Smoothness factor for Perlin Noise
+ // Max height of terrain 
     public int smoothResolution = 2;  // Number of interpolated points between spline points
     public int colliderDetail = 2;    // Detail level for EdgeCollider2D sampling
     public float seed = 0f;
+    public GameObject CarPrefab;
+    public Transform Wheel1,Wheel2;
     private EdgeCollider2D edgeCollider; // EdgeCollider2D reference
     public Sprite edgeSprite; // The sprite to use for the edge
     public Color edgeColor = Color.white;
-    public GameObject Fuel,CoinPrefab,ChrisTree;
-    public GameObject Cloud1,Cloud2,Cloud3,Cloud4,CloudParent,CloudParent2;
+    public GameObject Fuel,CoinPrefab;
+    public GameObject Grass1,Grass2,Tree1,Stone1,Stone2,Flower,Emptyy,Cloud1,Cloud2,Cloud3,Cloud4,CloudParent,CloudParent2;
     internal static bool isTerrainRendered;
 
     private void Start()
     {   
         seed=UnityEngine.Random.Range(1, 10000);
-        
+        float heightMultiplier=PlayerPrefs.GetFloat("HeightMultiplier", 100);
+        float smoothness = PlayerPrefs.GetFloat("Smoothness", 5f);
+        float HeightIncrease = PlayerPrefs.GetFloat("Difficulty", 2f);
         edgeCollider = GetComponent<EdgeCollider2D>();
         if (edgeCollider == null)
         {
@@ -46,7 +49,7 @@ public class Level_2 : MonoBehaviour
         for (int i = 0; i < numOfPoints; i++)
         {   
             if(i>0){
-                heightMultiplier+=2f;
+                heightMultiplier+=HeightIncrease;
                 smoothness +=  0.02f;
             }
             float xPos = i * distanceBetweenPoints;
@@ -61,20 +64,19 @@ public class Level_2 : MonoBehaviour
             prevY = yPos;
         }
         //Set tangent mode for smooth curves
-        // for (int i = 2; i < numOfPoints + 2; i++)
-        // {
-        //     shape.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
-        // }
+        for (int i = 2; i < numOfPoints + 2; i++)
+        {
+            shape.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
+        }
         //Smooth the terrain using Catmull-Rom interpolation
         SmoothSpline();
 
         // Update EdgeCollider2D to follow the smooth terrain
         UpdateEdgeCollider1();
-        //SpawnProps1();
-        //SpawnClouds1();
-        SpawnTree1();
+        SpawnProps1();
+        SpawnClouds1();
         SpawnCoins1();
-    
+        //SetCarPosition();
     }
     private void SmoothSpline()
     {
@@ -104,6 +106,15 @@ public class Level_2 : MonoBehaviour
             shape.spline.InsertPointAt(i, smoothedPoints[i]);
             shape.spline.SetTangentMode(i, ShapeTangentMode.Continuous);
         }
+    }
+    private void SetCarPosition(){
+        float x = shape.spline.GetPosition(4).x;
+        float y = shape.spline.GetPosition(4).y;
+        Wheel1.SetParent(CarPrefab.transform);
+        Wheel2.SetParent(CarPrefab.transform);
+        CarPrefab.transform.position = new Vector3(x,y+40,0);
+        Wheel1.SetParent(null);
+        Wheel2.SetParent(null);
     }
     private Vector3 GetCatmullRomPosition(float t, Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)
     {
@@ -141,8 +152,9 @@ public class Level_2 : MonoBehaviour
         // Assign sampled points to the EdgeCollider2D
         edgeCollider.points = colliderPoints.ToArray();
     }
-    private void SpawnTree1(){
-        int pointCount = shape.spline.GetPointCount();
+private void SpawnProps1()
+{
+    int pointCount = shape.spline.GetPointCount();
     Transform propParent = new GameObject("PropsParent").transform; // Group all props
 
     for (int i = 0; i < pointCount - 1; i++)
@@ -155,117 +167,90 @@ public class Level_2 : MonoBehaviour
         float angle = Mathf.Atan2(tangent.y, tangent.x) * Mathf.Rad2Deg;
 
         // Number of props per segment (1 to 3 randomly)
-        int randomnum=UnityEngine.Random.Range(1, 100);
+        int numProps = UnityEngine.Random.Range(1, 4);
 
-        
-            if (ChrisTree != null&&randomnum<10)
+        for (int j = 0; j < numProps; j++)
+        {
+            // Offset position slightly along the segment
+            float t = UnityEngine.Random.Range(0f, 1f);
+            Vector3 spawnPoint = Vector3.Lerp(point, nextPoint, t);
+
+            // Add small random variation in height
+            spawnPoint.y += UnityEngine.Random.Range(-0.2f, 0f);
+
+            // Randomize prop selection
+            int randomNumber = UnityEngine.Random.Range(1, 101);
+            GameObject prefab = null;
+
+            if (randomNumber <= 50)
+            {
+                prefab = (randomNumber > 30) ? Grass1 : (randomNumber > 10) ? Grass2 : Tree1;
+            }
+            else
+            {
+                if (randomNumber < 60)
+                    prefab = Stone1;
+                else if (randomNumber < 70)
+                    prefab = Stone2;
+                else if (randomNumber < 75)
+                    prefab = Flower;
+            }
+
+            if (prefab != null)
             {
                 // Instantiate with slight random scaling
-                GameObject prop = Instantiate(ChrisTree, point, Quaternion.Euler(0, 0, angle)); 
+                GameObject prop = Instantiate(prefab, spawnPoint, Quaternion.Euler(0, 0, angle));
+                prop.transform.localScale *= UnityEngine.Random.Range(0.8f, 1.4f); // Scale variation
                 prop.transform.SetParent(propParent); // Organize under parent
             }
         }
     }
-    
-// private void SpawnProps1()
-// {
-//     int pointCount = shape.spline.GetPointCount();
-//     Transform propParent = new GameObject("PropsParent").transform; // Group all props
-
-//     for (int i = 0; i < pointCount - 1; i++)
-//     {
-//         Vector3 point = shape.spline.GetPosition(i);
-//         Vector3 nextPoint = shape.spline.GetPosition(i + 1);
-
-//         // Calculate the tangent and slope angle
-//         Vector3 tangent = nextPoint - point;
-//         float angle = Mathf.Atan2(tangent.y, tangent.x) * Mathf.Rad2Deg;
-
-//         // Number of props per segment (1 to 3 randomly)
-//         int numProps = UnityEngine.Random.Range(1, 4);
-
-//         for (int j = 0; j < numProps; j++)
-//         {
-//             // Offset position slightly along the segment
-//             float t = UnityEngine.Random.Range(0f, 1f);
-//             Vector3 spawnPoint = Vector3.Lerp(point, nextPoint, t);
-
-//             // Add small random variation in height
-//             spawnPoint.y += UnityEngine.Random.Range(-0.2f, 0f);
-
-//             // Randomize prop selection
-//             int randomNumber = UnityEngine.Random.Range(1, 101);
-//             GameObject prefab = null;
-
-//             if (randomNumber <= 50)
-//             {
-//                 prefab = (randomNumber > 30) ? Grass1 : (randomNumber > 10) ? Grass2 : Tree1;
-//             }
-//             else
-//             {
-//                 if (randomNumber < 60)
-//                     prefab = Stone1;
-//                 else if (randomNumber < 70)
-//                     prefab = Stone2;
-//                 else if (randomNumber < 75)
-//                     prefab = Flower;
-//             }
-
-//             if (prefab != null)
-//             {
-//                 // Instantiate with slight random scaling
-//                 GameObject prop = Instantiate(prefab, spawnPoint, Quaternion.Euler(0, 0, angle));
-//                 prop.transform.localScale *= UnityEngine.Random.Range(0.6f, 1.4f); // Scale variation
-//                 prop.transform.SetParent(propParent); // Organize under parent
-//             }
-//         }
-//     }
-// }
+}
 
 
-//     private void SpawnClouds1()
-// {
-//     int pointCount = shape.spline.GetPointCount(); // Store count for efficiency // Create parent for organization
+    private void SpawnClouds1()
+{
+    int pointCount = shape.spline.GetPointCount(); // Store count for efficiency // Create parent for organization
 
-//     for (int i = 0; i < pointCount; i++)
-//     {
-//         Vector3 point = shape.spline.GetPosition(i);
-//         int randomNumber = UnityEngine.Random.Range(1, 200); // Use Unity's Random
+    for (int i = 0; i < pointCount; i++)
+    {
+        Vector3 point = shape.spline.GetPosition(i);
+        int randomNumber = UnityEngine.Random.Range(1, 200); // Use Unity's Random
 
-//         GameObject cloudPrefab = null;
-//         float heightOffset = 0f;
+        GameObject cloudPrefab = null;
+        float heightOffset = 0f;
 
-//         if (randomNumber <= 10)
-//         {
-//             cloudPrefab = Cloud1;
-//             heightOffset = UnityEngine.Random.Range(20f, 45f);
-//         }
-//         else if (randomNumber <= 20)
-//         {
-//             cloudPrefab = Cloud2;
-//             heightOffset = UnityEngine.Random.Range(30f, 55f);
-//         }
-//         else if (randomNumber <= 30)
-//         {
-//             cloudPrefab = Cloud3;
-//             heightOffset= UnityEngine.Random.Range(20f, 35f);
-//         }
-//         else if (randomNumber <= 40)
-//         {
-//             cloudPrefab = Cloud4;
-//             heightOffset = UnityEngine.Random.Range(35f, 50f);
-//         }
+        if (randomNumber <= 10)
+        {
+            cloudPrefab = Cloud1;
+            heightOffset = UnityEngine.Random.Range(20f, 45f);
+        }
+        else if (randomNumber <= 20)
+        {
+            cloudPrefab = Cloud2;
+            heightOffset = UnityEngine.Random.Range(30f, 55f);
+        }
+        else if (randomNumber <= 30)
+        {
+            cloudPrefab = Cloud3;
+            heightOffset= UnityEngine.Random.Range(20f, 35f);
+        }
+        else if (randomNumber <= 40)
+        {
+            cloudPrefab = Cloud4;
+            heightOffset = UnityEngine.Random.Range(35f, 50f);
+        }
 
-//         if (cloudPrefab != null)
-//         {
-//             GameObject cloudInstance = Instantiate(cloudPrefab, point + new Vector3(0, heightOffset, 0), Quaternion.identity);
-//             if(randomNumber<=20)
-//                 cloudInstance.transform.SetParent(CloudParent.transform); // Assign to parent GameObject
-//             else
-//                 cloudInstance.transform.SetParent(CloudParent2.transform);
-//         }
-//     }
-// }
+        if (cloudPrefab != null)
+        {
+            GameObject cloudInstance = Instantiate(cloudPrefab, point + new Vector3(0, heightOffset, 0), Quaternion.identity);
+            if(randomNumber<=20)
+                cloudInstance.transform.SetParent(CloudParent.transform); // Assign to parent GameObject
+            else
+                cloudInstance.transform.SetParent(CloudParent2.transform);
+        }
+    }
+}
 private void SpawnCoins1()
 {
     int pointCount = shape.spline.GetPointCount(); // Store count for efficiency
@@ -280,7 +265,7 @@ private void SpawnCoins1()
         float angle = Mathf.Atan2(tangent.y, tangent.x) * Mathf.Rad2Deg;
 
         // Number of coins in bundle increases as we move forward
-        int coinsInBundle = Mathf.Clamp(i / 20, 1, 3); // Min 1, Max 3 coins per bundle
+        int coinsInBundle = Mathf.Clamp(i / 20, 1, 4); // Min 1, Max 3 coins per bundle
         float coinSpacing = 7f; // Distance between coins in a bundle
 
         for (int j = 0; j < coinsInBundle; j++)

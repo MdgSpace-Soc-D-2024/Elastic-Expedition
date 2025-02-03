@@ -8,12 +8,12 @@ public class FuelManager : MonoBehaviour
     public float fuelConsumptionRate = 1f; // Fuel consumed per second
     public Slider loadingBar; // Reference to the Slider UI element   
     public GameObject GameOverPanel;
-    
+    public float fcr;
     private void Start()
     {
         // Initialize fuel to the maximum value
         currentFuel = maxFuel;
-
+        fcr = PlayerPrefs.GetFloat("Fuelrate", 5f);
         // Update the UI initially
         UpdateFuelUI();
     }
@@ -32,7 +32,7 @@ public class FuelManager : MonoBehaviour
     {
         // Reduce fuel over time4
         if(Input.GetAxis("Horizontal")!=0f||Input.GetAxis("Vertical")!=0f)
-            fuelConsumptionRate=5f;
+            fuelConsumptionRate=fcr;
         // else if(Input.GetAxis("Horizontal")!=0f||Input.GetAxis("Vertical")!=0f)
         //     fuelConsumptionRate=4f;
         else

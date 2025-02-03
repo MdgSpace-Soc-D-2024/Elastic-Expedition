@@ -8589,7 +8589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inGameCoinsText: {fileID: 1347093912}
-  Car: {fileID: 1902190976}
+  Car: {fileID: 514110196}
   GameOverCoinsText: {fileID: 1794218027}
 --- !u!4 &1466139994
 Transform:

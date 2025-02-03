@@ -74,7 +74,7 @@ public class Rear_wheel : MonoBehaviour
         netForce =appliedForce+mass * gravity + normal + friction-airdrag*velocity;
         ApplyForces(netForce, dt);
         // Update camera position
-        //MainCam.localPosition = Wheel.position + new Vector3(0f, 0f, -10f);
+        //Square.localPosition = Wheel.position + new Vector3(0f, -1.31f, 0f);
         previousHits = hits;
     }
     private void HandleCollision(RaycastHit2D[] hits, float dt, bool flag)

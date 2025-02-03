@@ -10,7 +10,7 @@ public class ForceController : MonoBehaviour
     public Front_wheel Script_F;
     public Vector2 rod_along, force = new Vector2(0, 0);
     public RaycastHit2D[] hitr,hitf;
-    public float delta,delta2,delta3,rotation,acc,brake;
+    public float delta,delta2,delta3;
     private void Start()
     {
         delta = Time.fixedDeltaTime;
@@ -18,13 +18,13 @@ public class ForceController : MonoBehaviour
         delta3 = delta;
         Script_R = rear.GetComponent<Rear_wheel>();
         Script_F = front.GetComponent<Front_wheel>();
-        rotation = PlayerPrefs.GetFloat("Rotation",0.1f);
-        acc = PlayerPrefs.GetFloat("acc", 70);
-        brake = PlayerPrefs.GetFloat("brake", -90);
+
     }
     void FixedUpdate()
     {
         delta+= Time.fixedDeltaTime;
+        delta2+= Time.fixedDeltaTime;
+        delta3+= Time.fixedDeltaTime;
         hitr = Script_R.hits;
         hitf = Script_F.hits;
         float dt = Time.fixedDeltaTime;
@@ -34,23 +34,24 @@ public class ForceController : MonoBehaviour
         //Update applied force based on user input
         if (horizontalInput == 1)
         {
-            AppliedForce = new Vector2(acc, 0f);
-            if (Script_F.hits.Length == 0)
+            AppliedForce = new Vector2(70f, 0f);
+            if (Script_F.hits.Length == 0&&Script_R.hits.Length==0)
             {
-                Vector2 force = new Vector2(-rod_along.y, rod_along.x).normalized * rotation;
+                Vector2 force = new Vector2(-rod_along.y, rod_along.x).normalized * 0.1f;
                 Script_F.velocity += force;
-
                 //Script_R.ApplyForces(-force, dt);
+                AppliedForce = new Vector2(0f, 0f);
             }
         }
         else if (horizontalInput == -1)
         {
-            AppliedForce = new Vector2(brake, 0f);
-            if (Script_F.hits.Length == 0)
+            AppliedForce = new Vector2(-90f, 0f);
+            if (Script_F.hits.Length == 0&&Script_R.hits.Length==0)
             {
                 Vector2 force = new Vector2(-rod_along.y, rod_along.x).normalized * 0.1f;
                 Script_F.velocity -= force;
                 //Script_R.ApplyForces(-force, dt);
+                AppliedForce = new Vector2(0f, 0f);
             }
         }
         else if (Input.GetKey("e"))
@@ -64,7 +65,8 @@ public class ForceController : MonoBehaviour
                 force = 100 * rod_along;
                 Script_F.ApplyForces(force, dt);
                 Script_R.ApplyForces(-force, dt);
-                delta2 = 0f;
+                if(delta2>100)
+                delta2=0f;
             }
         }
         else if (VerticalInput == -1)
@@ -74,6 +76,7 @@ public class ForceController : MonoBehaviour
                 force = -100 * rod_along;
                 Script_F.ApplyForces(force, dt);
                 Script_R.ApplyForces(-force, dt);
+                if(delta3>100)
                 delta3 = 0f;
             }
         }
@@ -90,6 +93,6 @@ public class ForceController : MonoBehaviour
                 }
                 delta = 0f;
             }
-        }
-    }
+        }
+    }
 }

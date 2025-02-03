@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.U2D;
 using System;
 using Unity.VisualScripting;
-public class Level_2 : MonoBehaviour
+public class Level_3 : MonoBehaviour
 {
     public SpriteShapeController shape; // Reference to SpriteShapeController
     public int scale = 4000;            // Total width of the terrain
